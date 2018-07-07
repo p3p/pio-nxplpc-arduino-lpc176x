@@ -1,6 +1,6 @@
 {
-  "name": "nxplpc",
-  "title": "NXP LPC",
+  "name": "nxplpc-cmsis-arduino",
+  "title": "NXP LPC176x CMSIS Arduino",
   "description": "The NXP LPC is a family of 32-bit microcontroller integrated circuits by NXP Semiconductors. The LPC chips are grouped into related series that are based around the same 32-bit ARM processor core, such as the Cortex-M4F, Cortex-M3, Cortex-M0+, or Cortex-M0. Internally, each microcontroller consists of the processor core, static RAM memory, flash memory, debugging interface, and various peripherals.",
   "url": "http://www.nxp.com/products/microcontrollers/",
   "homepage": "http://platformio.org/platforms/nxplpc",
@@ -10,28 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/platformio/platform-nxplpc.git"
+    "url": "https://github.com/p3p/platform-nxplpc-cmsis-arduino.git"
   },
-  "version": "3.3.1",
+  "version": "0.0.1",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "http://dl.platformio.org/packages/manifest.json"
   ],
   "frameworks": {
-    "mbed": {
-      "package": "framework-mbed",
-      "script": "builder/frameworks/mbed/mbed.py"
-    }
+
   },
   "packages": {
     "toolchain-gccarmnoneeabi": {
       "type": "toolchain",
       "version": ">=1.60301.0"
-    },
-    "framework-mbed": {
-      "type": "framework",
-      "optional": true,
-      "version": "~4.50806.0"
     },
     "tool-openocd": {
       "type": "debugger",
