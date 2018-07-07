@@ -1,0 +1,32 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "f_cpu": "180000000L",
+    "mcu": "lpc54608et512"
+  },
+  "connectivity": [
+    "ethernet"
+  ],
+  "debug": {
+    "jlink_device": "LPC54608J512",
+    "onboard_tools": [
+      "jlink"
+    ],
+    "svd_path": "LPC5410x_v0.4.svd"
+  },
+  "frameworks": [
+    "mbed"
+  ],
+  "name": "NXP LPCXpresso54608",
+  "upload": {
+    "maximum_ram_size": 204800,
+    "maximum_size": 524288,
+    "protocol": "mbed",
+    "protocols": [
+      "jlink",
+      "mbed"
+    ]
+  },
+  "url": "https://os.mbed.com/platforms/LPCXpresso54608/",
+  "vendor": "NXP"
+}
