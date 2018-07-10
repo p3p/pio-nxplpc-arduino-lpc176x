@@ -38,12 +38,13 @@ env.Replace(
     ASFLAGS=["-x", "assembler-with-cpp"],
 
     CCFLAGS=[
-        "-Os",  # optimize for size
-        "-ffunction-sections",  # place each function in its own section
+        "-Os",
+        "-ffunction-sections",
         "-fdata-sections",
         "-Wall",
         "-mthumb",
-        "-nostdlib"
+        "--specs=nano.specs",
+        "--specs=nosys.specs"
     ],
 
     CXXFLAGS=[
@@ -57,8 +58,10 @@ env.Replace(
 
     LINKFLAGS=[
         "-Os",
-        "-Wl,--gc-sections,--relax",
-        "-mthumb"
+        "-mthumb",
+        "--specs=nano.specs",
+        "--specs=nosys.specs",
+        "-u_printf_float"
     ],
 
     LIBS=["c", "gcc", "m"],

@@ -1,12 +1,11 @@
 {
   "build": {
     "cpu": "cortex-m3",
-    "f_cpu": "96000000L",
-    "mcu": "lpc1768"
+    "f_cpu": "120000000L",
+    "mcu": "lpc1768",
+    "core": "arduino"
   },
   "connectivity": [
-    "can",
-    "ethernet"
   ],
   "debug": {
     "jlink_device": "LPC1768",
@@ -27,12 +26,12 @@
     }
   },
   "frameworks": [
-    "mbed"
+    "arduino"
   ],
-  "name": "NXP mbed LPC1768",
+  "name": "NXP LPC1769",
   "upload": {
-    "maximum_ram_size": 65536,
-    "maximum_size": 524288,
+    "maximum_ram_size": 32568,
+    "maximum_size": 458752,
     "protocol": "mbed",
     "protocols": [
       "jlink",
@@ -41,6 +40,6 @@
       "mbed"
     ]
   },
-  "url": "http://developer.mbed.org/platforms/mbed-LPC1768/",
+  "url": "https://www.nxp.com/docs/en/data-sheet/LPC1769_68_67_66_65_64_63.pdf",
   "vendor": "NXP"
 }

@@ -17,7 +17,7 @@ from platform import system
 from platformio.managers.platform import PlatformBase
 
 
-class NxplpccmsisarduinoPlatform(PlatformBase):
+class Nxplpcarduinolpc176xPlatform(PlatformBase):
 
     def is_embedded(self):
         return True
