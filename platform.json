@@ -10,12 +10,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/p3p/platform-nxplpc-arduino-lpc176x.git"
+    "url": "https://github.com/p3p/pio-nxplpc-arduino-lpc176x.git"
   },
   "version": "0.0.1",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
-    "http://dl.platformio.org/packages/manifest.json"
+    "http://dl.platformio.org/packages/manifest.json",
+    "https://raw.githubusercontent.com/p3p/pio-nxplpc-arduino-lpc176x/master/manifest.json"
   ],
   "frameworks": {
     "arduino": {
