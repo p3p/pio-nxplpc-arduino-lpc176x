@@ -48,8 +48,11 @@ env.Replace(
     ],
 
     CXXFLAGS=[
+        "-std=gnu++17",
         "-fno-rtti",
-        "-fno-exceptions"
+        "-fno-exceptions",
+        "-fno-use-cxa-atexit",
+        "-fno-common"
     ],
 
     CPPDEFINES=[

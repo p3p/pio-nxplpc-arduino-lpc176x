@@ -65,7 +65,7 @@ env.Append(
         join(SYSTEM_DIR, "CMSIS", "bin")
     ],
 
-    LIBS=["usbd_175x_6x_lib"]
+    LIBS=[]
 )
 
 #

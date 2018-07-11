@@ -31,7 +31,7 @@
   "name": "NXP LPC1769",
   "upload": {
     "maximum_ram_size": 32568,
-    "maximum_size": 458752,
+    "maximum_size": 475136,
     "protocol": "mbed",
     "protocols": [
       "jlink",
