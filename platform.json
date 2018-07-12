@@ -32,7 +32,7 @@
     "framework-arduino-lpc176x": {
       "type": "framework",
       "optional": true,
-      "version": "0.00.01"
+      "version": "0.0.1"
     },
     "tool-openocd": {
       "type": "debugger",

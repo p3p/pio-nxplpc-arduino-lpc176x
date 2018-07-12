@@ -36,7 +36,7 @@ SYSTEM_DIR = join(FRAMEWORK_DIR, "system")
 # USB flags
 ARDUINO_USBDEFINES = [
     "ARDUINO_ARCH_LPC176X",
-    ("ARDUINO", 10805)
+    ("ARDUINOLPC", 10805)
 ]
 
 env.Append(

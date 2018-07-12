@@ -2,7 +2,7 @@
     "framework-arduino-lpc176x": [
         {
             "url": "https://github.com/p3p/pio-framework-arduino-lpc176x/archive/master.zip",
-            "version": "0.00.01"
+            "version": "0.0.1"
         }
     ]
 }
