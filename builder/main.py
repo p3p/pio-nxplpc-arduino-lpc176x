@@ -23,6 +23,9 @@ from SCons.Script import (COMMAND_LINE_TARGETS, AlwaysBuild, Builder, Default,
 env = DefaultEnvironment()
 platform = env.PioPlatform()
 
+if "BOARD" in env:
+    target_mcu = env.BoardConfig().get("build.mcu").upper()
+
 env.Replace(
     AR="arm-none-eabi-ar",
     AS="arm-none-eabi-as",
@@ -56,7 +59,9 @@ env.Replace(
     ],
 
     CPPDEFINES=[
-        ("F_CPU", "$BOARD_F_CPU")
+        ("TARGET_LPC1768"),
+        ("F_CPU", "$BOARD_F_CPU"),
+        ("MCU_" + target_mcu)
     ],
 
     LINKFLAGS=[

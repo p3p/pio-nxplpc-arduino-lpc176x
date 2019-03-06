@@ -2,7 +2,7 @@
   "build": {
     "cpu": "cortex-m3",
     "f_cpu": "120000000L",
-    "mcu": "lpc1768",
+    "mcu": "lpc1769",
     "core": "arduino"
   },
   "connectivity": [
