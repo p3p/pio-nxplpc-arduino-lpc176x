@@ -1,6 +1,10 @@
 {
     "framework-arduino-lpc176x": [
         {
+            "url": "https://github.com/p3p/pio-framework-arduino-lpc176x/archive/0.1.3.zip",
+            "version": "0.1.3"
+        },
+        {
             "url": "https://github.com/p3p/pio-framework-arduino-lpc176x/archive/0.1.2.zip",
             "version": "0.1.2"
         },
