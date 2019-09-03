@@ -44,6 +44,12 @@
             "url": "https://github.com/p3p/pio-framework-arduino-lpc176x/archive/0.0.1.zip",
             "version": "0.0.1"
         }
+    ],
+    "toolchain-gccarmnoneeabi":[
+        {
+            "url": "https://github.com/p3p/pio-nxplpc-arduino-lpc176x/releases/download/0.0.1/toolchain-gccarmnoneeabi-opt.tar.gz",
+            "version": "1.80201.181221"
+        }
     ]
 }
 
