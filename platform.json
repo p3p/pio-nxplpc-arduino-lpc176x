@@ -27,7 +27,7 @@
   "packages": {
     "toolchain-gccarmnoneeabi": {
       "type": "toolchain",
-      "version": ">=1.80201.181221"
+      "version": ">=1.60301.0"
     },
     "framework-arduino-lpc176x": {
       "type": "framework",
