@@ -69,6 +69,18 @@ env.Append(
 )
 
 #
+# lpc176x interface
+#
+
+env.Append(
+    CPPPATH=[
+        join(SYSTEM_DIR, "lpc176x"),
+    ],
+
+    LIBS=[]
+)
+
+#
 # Lookup for specific core's libraries
 #
 
@@ -89,6 +101,11 @@ libs = []
 libs.append(env.BuildLibrary(
                 join("$BUILD_DIR", "CMSIS"),
                 join(FRAMEWORK_DIR, "system", "CMSIS")
+))
+
+libs.append(env.BuildLibrary(
+                join("$BUILD_DIR", "lpc176x"),
+                join(FRAMEWORK_DIR, "system", "lpc176x")
 ))
 
 if "build.variant" in env.BoardConfig():
