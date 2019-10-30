@@ -6,13 +6,13 @@
   "homepage": "http://platformio.org/platforms/nxplpc",
   "license": "Apache-2.0",
   "engines": {
-    "platformio": "^3.0.0"
+    "platformio": "^4.0.0"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/p3p/pio-nxplpc-arduino-lpc176x.git"
   },
-  "version": "0.0.2",
+  "version": "0.1.0",
   "packageRepositories": [
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
     "http://dl.platformio.org/packages/manifest.json",
@@ -32,7 +32,7 @@
     "framework-arduino-lpc176x": {
       "type": "framework",
       "optional": true,
-      "version": ">=0.0.2"
+      "version": ">=0.2.0"
     },
     "tool-openocd": {
       "type": "debugger",

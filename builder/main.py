@@ -23,6 +23,9 @@ from SCons.Script import (COMMAND_LINE_TARGETS, AlwaysBuild, Builder, Default,
 env = DefaultEnvironment()
 platform = env.PioPlatform()
 
+framework_version = ''.join(['{0:0=3d}'.format(int(x)) for x in platform.get_package_version('framework-arduino-lpc176x').split('.')]) + 'UL'
+platform_version = ''.join(['{0:0=3d}'.format(int(x)) for x in platform.version.split('.')]) + 'UL'
+
 if "BOARD" in env:
     target_mcu = env.BoardConfig().get("build.mcu").upper()
 
@@ -44,10 +47,15 @@ env.Replace(
         "-Os",
         "-ffunction-sections",
         "-fdata-sections",
+        "-fsingle-precision-constant",
+        #"-ffast-math",
+        #"-funsafe-math-optimizations",
         "-Wall",
         "-mthumb",
         "--specs=nano.specs",
-        "--specs=nosys.specs"
+        "--specs=nosys.specs",
+        #"-flto",
+        #"-ffat-lto-objects"
     ],
 
     CXXFLAGS=[
@@ -55,21 +63,25 @@ env.Replace(
         "-fno-rtti",
         "-fno-exceptions",
         "-fno-use-cxa-atexit",
-        "-fno-common"
+        "-fno-common",
+        "-fno-threadsafe-statics"
     ],
 
     CPPDEFINES=[
+        ("LPC176X_FRAMEWORK"),
         ("TARGET_LPC1768"),
         ("F_CPU", "$BOARD_F_CPU"),
-        ("MCU_" + target_mcu)
+        ("MCU_" + target_mcu),
+        ("PIO_PLATFORM_VERSION", platform_version),
+        ("PIO_FRAMEWORK_VERSION", framework_version)
     ],
 
     LINKFLAGS=[
-        "-Os",
         "-mthumb",
         "--specs=nano.specs",
         "--specs=nosys.specs",
-        "-u_printf_float"
+        #"-u_printf_float",
+        "-flto"
     ],
 
     LIBS=["c", "gcc", "m"],
