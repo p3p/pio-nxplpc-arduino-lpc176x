@@ -14,9 +14,9 @@
   },
   "version": "0.1.0",
   "packageRepositories": [
+    "https://raw.githubusercontent.com/p3p/pio-nxplpc-arduino-lpc176x/release/manifest.json",
     "https://dl.bintray.com/platformio/dl-packages/manifest.json",
-    "http://dl.platformio.org/packages/manifest.json",
-    "https://raw.githubusercontent.com/p3p/pio-nxplpc-arduino-lpc176x/master/manifest.json"
+    "http://dl.platformio.org/packages/manifest.json"
   ],
   "frameworks": {
     "arduino": {
@@ -32,7 +32,7 @@
     "framework-arduino-lpc176x": {
       "type": "framework",
       "optional": true,
-      "version": ">=0.0.2"
+      "version": ">=0.2.0"
     },
     "tool-openocd": {
       "type": "debugger",
