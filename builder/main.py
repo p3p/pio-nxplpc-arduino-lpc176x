@@ -23,8 +23,8 @@ from SCons.Script import (COMMAND_LINE_TARGETS, AlwaysBuild, Builder, Default,
 env = DefaultEnvironment()
 platform = env.PioPlatform()
 
-framework_version = ''.join(['{0:0=3d}'.format(int(x)) for x in platform.get_package_version('framework-arduino-lpc176x').split('.')]) + 'UL'
-platform_version = ''.join(['{0:0=3d}'.format(int(x)) for x in platform.version.split('.')]) + 'UL'
+platform_version  = str(int(''.join(['{0:0=3d}'.format(int(x)) for x in platform.version.split('.')]))) + 'UL'
+framework_version = str(int(''.join(['{0:0=3d}'.format(int(x)) for x in platform.get_package_version('framework-arduino-lpc176x').split('.')]))) + 'UL'
 
 if "BOARD" in env:
     target_mcu = env.BoardConfig().get("build.mcu").upper()
@@ -72,7 +72,7 @@ env.Replace(
         ("TARGET_LPC1768"),
         ("F_CPU", "$BOARD_F_CPU"),
         ("MCU_" + target_mcu),
-        ("PIO_PLATFORM_VERSION", platform_version),
+        ("PIO_PLATFORM_VERSION",  platform_version),
         ("PIO_FRAMEWORK_VERSION", framework_version)
     ],
 
